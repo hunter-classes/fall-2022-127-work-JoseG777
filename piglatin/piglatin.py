@@ -9,6 +9,7 @@ def piglatin(word):
     
         
 print(piglatin("apple"))
+print(piglatin("bike"))
 print(piglatin("your"))
 print(piglatin("hello"))
 
