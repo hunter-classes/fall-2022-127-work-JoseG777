@@ -9,14 +9,14 @@ print(is_even(2022))
 print(is_even(2023))
 
 #Q8
-def is_even(n):
+def is_odd(n):
     if n % 2 == 1:
         return True
     else:
         return False
     
-print(is_even(2022))
-print(is_even(2023))
+print(is_odd(2023))
+print(is_odd(2022))
 
 #Q10 & 11
 def is_rightangled(a, b, c):
