@@ -15,3 +15,4 @@ print(s3 * 3)
 
 print(len(s4))
 print(s1[0:5])
+
