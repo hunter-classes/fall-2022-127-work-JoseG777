@@ -20,14 +20,27 @@ print(is_even(2023))
 
 #Q10 & 11
 def is_rightangled(a, b, c):
+    if b < a:
+        temp1 = a
+        a = b
+        b = temp1
+    if c < b:
+        temp = b
+        b = c
+        c = temp
+        
+    else:
+        c = c
+        b = b
+        
     if a**2 + b**2 == c**2:
         return True
     else:
         return False
 
-
-print(is_rightangled(3, 4, 5))
-print(is_rightangled(3, 4, 10))
+print(is_rightangled(10, 8, 6))
+print(is_rightangled(5, 3, 4))
+print(is_rightangled(3, 3, 3))
 
 #CodingBat:
 
