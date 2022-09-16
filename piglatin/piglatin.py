@@ -1,6 +1,6 @@
 def piglatin(word):
-    l1 = word[0:1].lower()
-    if l1 == "a" or l1 == "e" or l1 == "i" or l1 == "o" or l1 == "u" or l1 == "y":
+    first = word[0:1].lower()
+    if first == "a" or first == "e" or first == "i" or first == "o" or first == "u" or first == "y":
         return word.capitalize() + "yay"
     else:
         new = word.replace(word[0:1], "") + word[0:1] + "ay"
@@ -14,3 +14,8 @@ print(piglatin("your"))
 print(piglatin("hello"))
 
 #Bond
+def bondify(name):
+  loc = name.find(" ")
+  return name[loc:] + ", " + name[0:loc] + " " + name[loc:]
+  
+print(bondify("Jose Guzman"))
