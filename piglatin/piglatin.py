@@ -1,9 +1,4 @@
 def piglatin(word):
-  exclaimation = word.find(!)
-  question = word.find(?)
-  if "." in word:
-    period = word.find(.)
-    
     first = word[0:1].lower()
     if first == "a" or first == "e" or first == "i" or first == "o" or first == "u" or first == "y":
         return word.capitalize() + "yay"
