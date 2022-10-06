@@ -10,3 +10,4 @@ myList.remove(76)
 myList.pop(myList.index(True))
 
 print(myList)
+#test
