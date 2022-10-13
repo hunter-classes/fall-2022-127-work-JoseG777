@@ -71,7 +71,7 @@ def n10(x):
 
 print(n10(str1ng))
 
-#11
+#11, Thomas helped
 def n11(list):
     total = 0
     i = 0
