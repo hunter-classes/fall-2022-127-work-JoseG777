@@ -84,11 +84,17 @@ print(n11(list))
 
 #12
 def n12(samlist):
-    sam = 0
-    i = 0
-    while list[i] != "sam" and i < len(samlist):
-        sam = sam + 1
-        i = i + 1
-    return sam + 1
+    var = 0
+    l12 = samlist.index("sam")
+    del samlist[l12 + 1:]
+    for i in samlist:
+        var = var + 1
+    return var
 
-print(n12(list))
+print(n12(samlist))
+
+
+
+
+
+    
