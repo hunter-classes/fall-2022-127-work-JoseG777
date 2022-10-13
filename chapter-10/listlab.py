@@ -2,6 +2,7 @@ list = [23 ,43, 44, 95, 10, 29, 11, 24, 34]
 list1 = [15, 16, 29, 10, 38, 43, 34, 76, 13]
 str1ng = "Just an example for the lab assignment stuff"
 list11 = str1ng.split()
+samlist = ["word", "words", "more", "sam", "even", "odd"]
 
 def n1(list):
     smallest = list[0]
@@ -69,3 +70,25 @@ def n10(x):
     return l4
 
 print(n10(str1ng))
+
+#11
+def n11(list):
+    total = 0
+    i = 0
+    while list[i] % 2 != 0 and i < len(list):
+        total = total + list[i]
+        i = i + 1
+    return total
+
+print(n11(list))
+
+#12
+def n12(samlist):
+    sam = 0
+    i = 0
+    while list[i] != "sam" and i < len(samlist):
+        sam = sam + 1
+        i = i + 1
+    return sam + 1
+
+print(n12(list))
