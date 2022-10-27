@@ -1,4 +1,3 @@
-from timeit import repeat
 
 list = [44, 44, 44, 44, 44, 32, 32, 33, 34, 56, 76, 766, 44]
 def mode(list):
