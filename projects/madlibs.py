@@ -1,7 +1,7 @@
 import random
 
 VERBS = ["DESTROY", "FIGHT", "WALK", "RUN"]
-NOUN = ["PUPPY", "DRAGON", "APPLE", "ORANGE"]
+NOUNS = ["PUPPY", "DRAGON", "APPLE", "ORANGE"]
 HERO = ["Jose", "Ace", "Zero"]
 
 s1 = open('story.dat')
@@ -14,14 +14,24 @@ def dh(H):
 
 s4 = dh(HERO)  
 
-
 def dv(V):
   s5 = s4.split()
   for i in s5:
     if i == '<VERB>':
-      i = random.choice(V)
+      i1 = s5.index(i)
+      s5.pop(i1)
+      s5.insert(i1, random.choice(V))
   return s5
-  
-  
-print(dv(VERBS)) 
+s6 = dv(VERBS)
+
+def dn(N):
+  for i in s6:
+    if i == '<NOUN>':
+      i1 = s6.index(i)
+      s6.pop(i1)
+      s6.insert(i1, random.choice(N))
+  s7 = ' '.join(s6)
+  return s7
+
+print(dn(NOUNS)) 
 
