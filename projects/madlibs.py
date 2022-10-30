@@ -1,3 +1,4 @@
+#2 EXTRAS
 import random
 
 VERBS = ["DESTROY", "FIGHT", "WALK", "RUN"]
@@ -33,5 +34,5 @@ def dn(N):
   s7 = ' '.join(s6)
   return s7
 
-print(dn(NOUNS)) 
+print(dn(NOUNS))
 
