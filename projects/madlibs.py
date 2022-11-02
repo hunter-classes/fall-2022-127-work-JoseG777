@@ -34,5 +34,13 @@ def dn(N):
   s7 = ' '.join(s6)
   return s7
 
-print(dn(NOUNS))
+def cap():
+  s8 = dn(NOUNS)
+  s9 = s8.split()
+  for i in s9:
+    if i == ".":
+      h1 = s9.index(i)
+      
+  return s9
 
+print(cap())
