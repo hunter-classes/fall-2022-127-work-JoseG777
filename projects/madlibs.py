@@ -1,46 +1,28 @@
-#2 EXTRAS
+#2 EXTRAS, STORY PULLED & READ FROM FILE + UNIQUE REPLACEMENTS THAT STAY CONSTANT
 import random
 
 VERBS = ["DESTROY", "FIGHT", "WALK", "RUN"]
 NOUNS = ["PUPPY", "DRAGON", "APPLE", "ORANGE"]
 HERO = ["Jose", "Ace", "Zero"]
 
-s1 = open('story.dat')
+s1 = open('story.dat') #Story pulled & read from file
 s2 = s1.read()
 
-def dh(H):
+def dh(H, V, N):
   H1 = random.choice(H)
-  s3 = s2.replace("<HERO>", H1)
-  return s3
-
-s4 = dh(HERO)  
-
-def dv(V):
-  s5 = s4.split()
-  for i in s5:
+  s3 = s2.replace("<HERO>", H1) # Unique replacement. Remains constant
+  s4 = s3.split()
+  for i in s4:
     if i == '<VERB>':
-      i1 = s5.index(i)
-      s5.pop(i1)
-      s5.insert(i1, random.choice(V))
-  return s5
-s6 = dv(VERBS)
-
-def dn(N):
-  for i in s6:
+      i1 = s4.index(i)
+      s4.pop(i1)
+      s4.insert(i1, random.choice(V))
+  for i in s4:
     if i == '<NOUN>':
-      i1 = s6.index(i)
-      s6.pop(i1)
-      s6.insert(i1, random.choice(N))
-  s7 = ' '.join(s6)
-  return s7
+      i1 = s4.index(i)
+      s4.pop(i1)
+      s4.insert(i1, random.choice(N))
+  s5 = ' '.join(s4)
+  return s5
 
-def cap():
-  s8 = dn(NOUNS)
-  s9 = s8.split()
-  for i in s9:
-    if i == ".":
-      h1 = s9.index(i)
-      
-  return s9
-
-print(cap())
+print(dh(HERO,VERBS,NOUNS))
