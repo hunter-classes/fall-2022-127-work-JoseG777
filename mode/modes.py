@@ -24,3 +24,4 @@ def freq(list):
             total = total + 1
     return total
 print (freq(list))
+
