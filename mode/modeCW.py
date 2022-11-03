@@ -1,15 +1,12 @@
-
-#WILL CONTINUE TO WORK ON THIS
-list = [44, 44, 44, 44, 44, 32, 32, 33, 34, 56, 76, 766, 33, 33, 33, 33, 33, 33, 33, 33, 33 ,33]
+list = [44, 32, 32, 33, 34, 56, 76, 766, 22, 22, 22, 22, 22, 22, 22, 22]
 def mode(list):
-    first = 0
-    start = list[first]
-    largest = list.count(start)
-    biggest = list[first]
+    fv = list[0]
+    fvc = list.count(fv)
+    biggest = list[0]
     for i in list:
-        if largest < list.count(list[first + 1]):
-            newlargest = list.count(list[first + 1])
-            largest = newlargest
+        if fvc < list.count(list[list.index(i)]):
+            newlargest = list.count(list[list.index(i)])
+            fvc = newlargest
             biggest = i
     return biggest
 print(mode(list))
