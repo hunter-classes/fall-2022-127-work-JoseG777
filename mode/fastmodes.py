@@ -1,17 +1,22 @@
 #RECIEVED HELP FROM THOMAS
+#Will continue to work on this
 import random
-ranlist = []
-for i in range (0, 100):
-  ran = random.randint(0,100)
-  ranlist.append(ran)
-print(ranlist)
+def buildRandomList(size,maxvalue):
+    result = [random.randrange(maxvalue) for x in range(size)]
+    return result 
 
-def fmode(list):
+def testFastModes(size, maxvalue):
+  dataset = buildRandomList(size, maxvalue)
+  result = fmodes(dataset)
+  print(dataset)
+  print(result)
+
+def fmodes(list):
+  largest = max(list)
   tallies = [0] * 100
   for i in list:
     tallies[i] += 1
-  mode = max(tallies)
-  mode1 = tallies.index(mode)
-  return mode1
-
-print(fmode(ranlist))
+  largest = max(tallies)
+  mode = tallies.index(max)
+  return mode
+print(fmodes(testFastModes(100, 100)))
