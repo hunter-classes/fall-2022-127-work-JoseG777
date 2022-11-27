@@ -11,7 +11,7 @@ trans2 = trans1.split()
 dict = {}
 for kv in trans2:
     ind = kv.find(':')
-    dict.update({kv[0:ind]:kv[ind + 1:]})
+    dict.update({kv[0:ind]:kv[ind + 1:]}) #PULLED FROM .DAT FILE AND ADDED TO DICTIONARY (DICT)
 
 text4 =[]
 for word in text3:
