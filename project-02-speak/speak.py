@@ -1,9 +1,17 @@
+#1 EXTRA, MAKING DICTIONARY FORM .DAT FILE
 text = open('input.txt')
 text1 = text.read()
 text2 = text1.lower()
 text3 = text2.split()
 
-dict = {'of': "o'", 'buddy':'matey', 'before':'afore', 'guys':'scurvey dogs', 'hero':'pirate', "and":"an'"}
+trans = open('pirates.dat')
+trans1 = trans.read()
+trans2 = trans1.split()
+
+dict = {}
+for kv in trans2:
+    ind = kv.find(':')
+    dict.update({kv[0:ind]:kv[ind + 1:]})
 
 text4 =[]
 for word in text3:
